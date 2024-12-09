@@ -73,7 +73,7 @@ export class Classroom extends NamedList {
     checkCalifications(arrayCalifications) {
         var validCalifications = true;
         arrayCalifications.forEach(calification => {
-            if (parseInt(calification) < 0 || parseInt(calification) > 10 || parseFloat(calification) % 1 != 0 || isNaN(parseInt(calification))) {
+            if (parseInt(calification) < 0 || parseInt(calification) > 10 || !/^\d+$/.test(calification)) {
                 validCalifications = false;
             }
         });
