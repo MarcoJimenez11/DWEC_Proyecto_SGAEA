@@ -1,0 +1,41 @@
+section.content {
+    display: flex;
+    background-color: rgb(222, 255, 244);
+}
+
+.studentTable,
+.studentTable td {
+    text-align: center;
+    border: 1px;
+    border-style: solid;
+    border-color: rgb(16, 7, 99);
+    background-color: rgb(235, 255, 248);
+    color: rgb(9, 1, 31);
+}
+
+#totalAverage {
+    text-align: end;
+}
+
+.tableHeader {
+    text-align: center;
+    font-weight: bold;
+}
+
+h1 {
+    display: block;
+    align-content: center;
+    text-align: center;
+    background-color: rgb(0, 255, 170);
+    color: rgb(255, 255, 255);
+}
+
+button {
+    background-color: rgb(0, 154, 103);
+    color: rgb(255, 255, 255);
+}
+
+button:hover {
+    background-color: rgb(0, 56, 37);
+    color: rgb(255, 255, 255);
+}

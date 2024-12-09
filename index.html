@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Proyecto 1</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <h1>Gestión de Estudiantes</h1>
+    <section class="content">
+        <section class="left">
+            <h2>Crear Estudiante</h2>
+            <table>
+                <tr>
+                    <td>
+                        <label>Nombre</label>
+                    </td>
+                    <td>
+                        <input type="text" id="nameStudent" name="nameStudent" value="Marco">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Edad</label>
+                    </td>
+                    <td>
+                        <input type="number" id="ageStudent" name="ageStudent" value="20">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Calle</label>
+                    </td>
+                    <td>
+                        <input type="text" id="roadDirection" name="roadDirection" value="Real">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Número</label>
+                    </td>
+                    <td>
+                        <input type="number" id="numberDirection" name="numberDirection" value="1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Piso</label>
+                    </td>
+                    <td>
+                        <input type="number" id="floorDirection" name="floorDirection" value="1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Código Postal</label>
+                    </td>
+                    <td>
+                        <input type="number" id="postcodeDirection" name="postcodeDirection" value="18230">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Provincia</label>
+                    </td>
+                    <td>
+                        <input type="text" id="provinceDirection" name="provinceDirection" value="Granada">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Localidad</label>
+                    </td>
+                    <td>
+                        <input type="text" id="localityDirection" name="localityDirection" value="Atarfe">
+                    </td>
+                </tr>
+            </table>
+
+            <button id="buttonAdd" name="buttonAdd"> Añadir Estudiante</button>
+
+
+
+            <h2>Borrar Estudiante</h2>
+            <label>Nombre</label>
+            <input type="text" id="nameRemoveStudent" name="nameRemoveStudent"><br>
+            <button id="buttonRemove" name="buttonRemove"> Borrar Estudiante</button>
+
+
+
+            <h2>Matricular a estudiante</h2>
+            <label>Nombre de estudiante</label>
+            <input type="text" id="nameStudentAddSubject" name="nameStudentAddSubject" value="Pepe"><br>
+            <label>Nombre de asignatura</label>
+            <select id="nameSubjectAddSubject" name="nameSubjectAddSubject">
+            </select>
+            <br>
+            <label>Fecha</label>
+            <input type="date" id="dateAddSubject" name="dateAddSubject" value="2024-01-01"><br>
+            <button id="buttonAddSubject" name="buttonAddSubject"> Matricular</button>
+
+            <h2>Añadir calificaciones a estudiante</h2>
+            <label>Nombre de estudiante</label>
+            <input type="text" id="nameStudentAddCalifications" name="nameStudentAddCalifications" value="Pepe"><br>
+            <label>Nombre de asignatura</label>
+            <select id="nameSubjectAddCalifications" name="nameSubjectAddCalifications">
+            </select>
+            <br>
+            <label>Notas (seguidas por coma)</label>
+            <input type="text" id="calificationsAddCalifications" name="calificationsAddCalifications" value="5,7,9"><br>
+            <button id="buttonAddCalifications" name="buttonAddCalifications"> Calificar</button>
+
+            <h2>Desmatricular a estudiante</h2>
+            <label>Nombre de estudiante</label>
+            <input type="text" id="nameStudentRemoveSubject" name="nameStudentRemoveSubject" value="Pepe"><br>
+            <label>Nombre de asignatura</label>
+            <select id="nameSubjectRemoveSubject" name="nameSubjectRemoveSubject">
+            </select>
+            <br>
+            <label>Fecha</label>
+            <input type="date" id="dateRemoveSubject" name="dateRemoveSubject" value="2025-01-01"><br>
+            <button id="buttonCancelSubject" name="buttonCancelSubject"> Desmatricular</button>
+            <button id="buttonRemoveSubject" name="buttonRemoveSubject"> Borrar</button>
+        </section>
+
+        <section id="centerSection" class="center">
+            <h2>Mostrar Estudiantes</h2>
+            <button id="buttonLogStudents" name="buttonLogStudents"> En consola</button>
+            <button id="buttonTableStudents" name="buttonTableStudents"> En tabla</button>
+
+            <h2>Mostrar matrículas de estudiante</h2>
+            <label>Nombre</label>
+            <input type="text" id="nameTuitionsStudent" name="nameTuitionsStudent" value="Pepe"><br>
+            <label>Asignaturas</label>
+            <input type="text" id="subjectTuitionsStudent" name="subjectTuitionsStudent" value="">
+            <button id="buttonTableSubjects" name="buttonTableSubjects"> En tabla</button>
+
+            <h2>Buscar Estudiantes</h2>
+            <label>Nombre (o parte de él)</label>
+            <input type="text" id="nameSearchStudent" name="nameSearchStudent">
+            <button id="buttonSearchStudent" name="buttonSearchStudent"> Buscar Estudiantes</button>
+
+            <h2>Mostrar notas por asignatura</h2>
+            <label>Asignaturas</label>
+            <input type="text" id="subjectShowCalifications" name="subjectShowCalifications" value="">
+            <button id="buttonTableCalifications" name="buttonTableCalifications"> En tabla</button>
+        </section>
+        <section id="rightSection" class="right">
+            <h2>Tabla de datos</h2>
+        </section>
+    </section>
+    <script type="module" src="js/SchoolManager.js"></script>
+</body>
+
+</html>
