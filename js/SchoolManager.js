@@ -57,6 +57,15 @@ createDropdownSubjects(selectRemove);
 createDropdownSubjects(selectCalificate);
 
 /*
+    ------------------ OTROS MÉTODOS
+*/
+
+function clearTable() {
+    const previousTable = document.getElementById("studentTable");
+    if (previousTable != null) previousTable.remove();
+}
+
+/*
    ------------------  LISTENERS
 */
 
@@ -73,15 +82,19 @@ document.getElementById("buttonAdd").addEventListener('click', function () {
     var direction = new Direction(road, number, floor, postcode, province, locality);
 
     classroom.addElement(new Student(student, age, direction));
+
+    clearTable();
 });
 
 document.getElementById("buttonRemove").addEventListener('click', function () {
     var student = document.getElementById("nameRemoveStudent").value;
     classroom.removeElement(student);
+    clearTable()
 });
 
 document.getElementById("buttonLogStudents").addEventListener('click', function () {
     classroom.logAllStudents();
+    clearTable()
 });
 
 document.getElementById("buttonTableStudents").addEventListener('click', function () {
@@ -105,6 +118,7 @@ document.getElementById("buttonAddSubject").addEventListener('click', function (
     var subject = new Tuition(subjectName, tuitionDate);
     classroom.addTuitionToStudent(student, subject);
 
+    clearTable()
 });
 
 document.getElementById("buttonAddCalifications").addEventListener('click', function () {
@@ -115,6 +129,7 @@ document.getElementById("buttonAddCalifications").addEventListener('click', func
 
     classroom.addCalificationsToStudent(student, subjectName, arrayCalifications);
 
+    clearTable()
 });
 
 document.getElementById("buttonCancelSubject").addEventListener('click', function () {
@@ -124,6 +139,7 @@ document.getElementById("buttonCancelSubject").addEventListener('click', functio
 
     classroom.cancelTuitionToStudent(student, subjectName, cancelDate);
 
+    clearTable()
 });
 
 document.getElementById("buttonRemoveSubject").addEventListener('click', function () {
@@ -132,6 +148,7 @@ document.getElementById("buttonRemoveSubject").addEventListener('click', functio
 
     classroom.removeTuitionToStudent(student, subjectName);
 
+    clearTable()
 });
 
 document.getElementById("buttonSearchStudent").addEventListener('click', function () {
