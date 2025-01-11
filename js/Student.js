@@ -1,29 +1,55 @@
 import { NamedList } from './NamedList.js';
 
-//Lista de asignaturas
+
+/**
+ * Estudiante con lista de matrículas asignadas
+ * @extends NamedList
+ */
 export class Student extends NamedList {
     #id;
     #age;
     #direction;
+    /**
+     * Crea un estudiante con su nombre, edad y dirección
+     * @param {String} name - El nombre del estudiante
+     * @param {Number} age - La edad del estudiante
+     * @param {Direction} direction - La dirección de la vivienda del estudiante
+     */
     constructor(name, age, direction) {
         super(name, []);
         this.age = age;
         this.direction = direction;
     }
 
+    /**
+     * Devuelve el identificador del estudiante
+     * @returns {Number} - El identificador del estudiante
+     */
     getId() {
         return this.id;
     }
 
+    /**
+     * Devuelve la edad del estudiante
+     * @returns {Number} - La edad del estudiante
+     */
     getAge() {
         return this.age;
     }
 
+    /**
+     * Devuelve la dirección del estudiante
+     * @returns {Direction} - La dirección del estudiante
+     */
     getDirection() {
         return this.direction;
     }
 
-    //Añade matrícula al alumno, comprobando que no esté ya matriculado en esa asignatura
+    /**
+     * Añade matrícula al alumno, comprobando que no esté ya matriculado en esa asignatura
+     * @param {Tuition} tuition - La matrícula que se añadirá a la lista de matrículas de este estudiante
+     * @returns {Boolean} - Estado de la operación (true si se ha añadido satisfactoriamente, false de lo contrario)
+     */
     addElement(tuition) {
         var element = this.elements.find(({ name }) => name === tuition.getName());
         let index = this.elements.indexOf(element);
@@ -37,7 +63,12 @@ export class Student extends NamedList {
         }
     }
 
-    //Añade notas a una asignatura dadas por parámetro
+    /**
+     * Añade notas a una asignatura dadas por parámetro
+     * @param {String} subjectName - El nombre de la asignatura a la que se añadirán las notas
+     * @param {Number[]} arrayCalifications - Array de notas que se añadirán a la asignatura dada
+     * @returns {Boolean} - Estado de la operación (true si se ha añadido satisfactoriamente, false de lo contrario)
+     */
     addCalifications(subjectName, arrayCalifications) {
         var tuition = this.elements.find(({ name }) => name === subjectName);
         let index = this.elements.indexOf(tuition);
@@ -53,7 +84,13 @@ export class Student extends NamedList {
         }
     }
 
-    //Desmatricula al alumno en la asignatura y fecha indicadas por parámetro
+    
+    /**
+     * Desmatricula al alumno en la asignatura y fecha indicadas por parámetro
+     * @param {String} nameTuition - Nombre de la asignatura de la que se quiere desmatricular
+     * @param {Date} cancelDate - Fecha que constará como fecha de desmatriculación
+     * @returns {Boolean} - Estado de la operación (true si se ha añadido satisfactoriamente, false de lo contrario)
+     */
     cancelTuition(nameTuition, cancelDate) {
         var element = this.elements.find(({ name }) => name === nameTuition);
         let index = this.elements.indexOf(element);
@@ -67,11 +104,20 @@ export class Student extends NamedList {
         }
     }
 
+    /**
+     * Establece un nuevo identificador al estudiante
+     * @param {Number} id - El nuevo identificador para el estudiante
+     */
     setID(id) {
         this.id = id;
     }
 
-    //Devuelve la media total de la media de cada asignatura que contenga el filtro indicado por parámetro
+    
+    /**
+     * Devuelve la media total de la media de cada asignatura que contenga el filtro indicado por parámetro
+     * @param {String} filter - Cadena de texto que deberán contener las asignaturas en las que esté matriculado el estudiante
+     * @returns {Number} - La media total de cada media de todas las asignaturas que cumplen el filtro dado
+     */
     getAverage(filter) {
         var subjects = this.searchElement(filter);
         var avg = 0;
@@ -84,11 +130,19 @@ export class Student extends NamedList {
         return parseInt(avg);
     }
 
+    /**
+     * Devuelve un texto con una breve descripción del estudiante según sus atributos
+     * @returns {String} - El texto que describe los atributos del estudiante
+     */
     toString() {
         return `${this.id} -> ${this.name} (${this.age} años) ${this.direction.toString()} \n ${this.elements}`;
     }
 
-    //Crea una tabla HTML que muestra las asignaturas que contengan el filtro dado por parámetro y sus notas y media
+    
+    /**
+     * Crea una tabla HTML que muestra las asignaturas que contengan el filtro dado por parámetro y sus notas y media
+     * @param {String} filter - Cadena de texto que deberán contener las asignaturas en las que esté matriculado el estudiante para filtrar
+     */
     createTable(filter) {
         var subjects = this.searchElement(filter);
         if (subjects != null && subjects.length > 0) {

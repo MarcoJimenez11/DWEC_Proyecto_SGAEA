@@ -6,7 +6,12 @@ import { Classroom } from './Classroom.js';
 
 const subjects = ["Física", "Matemáticas IV", "Matemáticas V", "Matemáticas VI", "Inglés", "Lengua VI", "Lengua VII", "Sociales", "Historia", "Química", "Francés"];
 
-//Inserta datos de alumnos de prueba
+
+/**
+ * Inserta datos de alumnos de prueba
+ * @param {String} studentName - Nombre del estudiante a insertas
+ * @param {String} locality - Localidad del estudiante
+ */
 function testInsertStudent(studentName, locality) {
     var direction = new Direction("Real", 1, 1, 18230, "Granada", locality);
     var randomAge = Math.floor(Math.random() * 20 + 10);
@@ -39,7 +44,11 @@ testInsertStudent("Pepe Segundo", "Zujaira");
     ---------------------------- DROPDOWNS
 */
 
-//Añade las asignaturas a los desplegables del html
+
+/**
+ * Añade las asignaturas a los desplegables del html
+ * @param {Object} selectDropdown - El desplegable en el que se insertará la lista de asignaturas
+ */
 function createDropdownSubjects(selectDropdown) {
     for (var i = 0; i < subjects.length; i++) {
         var option = subjects[i];
@@ -60,6 +69,9 @@ createDropdownSubjects(selectCalificate);
     ------------------ OTROS MÉTODOS
 */
 
+/**
+ * Elimina la tablade datos HTML de la página 
+ */
 function clearTable() {
     const previousTable = document.getElementById("studentTable");
     if (previousTable != null) previousTable.remove();
