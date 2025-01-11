@@ -1,16 +1,32 @@
-//Objeto con un nombre y una lista de elementos
+/**
+ * Objeto con un nombre y una lista de elementos
+ */
 export class NamedList {
     #name;
     #elements;
+    /**
+     * Crea una lista con nombre
+     * @param {String} name - El nombre de la lista
+     * @param {Object[]} elements - Array de elementos que contendrá la lista 
+     */
     constructor(name, elements) {
         this.name = name;
         this.elements = elements;
     }
 
+    /**
+     * Añade un elemento a la lista
+     * @param {Object} element - Elemento que será añadido a la lista
+     */
     addElement(element) {
         this.elements.push(element);
     }
 
+    /**
+     * Elimina un elemento de la lista según el nombre del elemento
+     * @param {String} nameElement - El nombre del elemento que se desea borrar
+     * @returns {Boolean} - Estado de la operación (true si se ha añadido satisfactoriamente, false de lo contrario)
+     */
     removeElement(nameElement) {
         var element = this.elements.find(({ name }) => name === nameElement);
         let index = this.elements.indexOf(element);
@@ -24,7 +40,11 @@ export class NamedList {
         }
     }
 
-    //Busca elementos del array que contengan el string dado por parámetro (ignorando mayúsculas y minúsculas).
+    /**
+     * Busca elementos del array que contengan el string dado por parámetro (ignorando mayúsculas y minúsculas).
+     * @param {String} elementName - Texto que debe contener los elementos de la lista para ser filtrados y devueltos
+     * @returns {*} - La lista de elementos filtrados si se ha añadido satisfactoriamente, false de lo contrario
+     */
     searchElement(elementName) {
         if (elementName == null)
             elementName = "";
@@ -37,19 +57,33 @@ export class NamedList {
         }
     }
 
+    /**
+     * Devuelve el nombre de esta lista
+     * @returns {String} - El nombre de la lista
+     */
     getName() {
         return this.name;
     }
 
+    /**
+     * Devuelve la lista de elementos de este objeto
+     * @returns {Object[]} - La lista de elementos
+     */
     getElements() {
         return this.elements;
     }
 
+    /**
+     * Devuelve la cantidad de elementos que hay en la lista de objetos
+     * @returns {Number} - Cantidad de elementos en la lista
+     */
     getCountElements() {
         return this.elements.length;
     }
 
-    //Crea una tabla HTML de forma dinámica
+    /**
+     * Crea una tabla HTML de forma dinámica
+     */
     createTable() {
         if (this.elements != null && this.elements.length > 0) {
             const section = document.getElementById("rightSection");
