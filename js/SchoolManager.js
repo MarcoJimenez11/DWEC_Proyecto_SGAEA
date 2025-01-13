@@ -8,7 +8,8 @@ const subjects = ["Física", "Matemáticas IV", "Matemáticas V", "Matemáticas 
 
 
 /**
- * Inserta datos de alumnos de prueba
+ * @function
+ * @description Inserta datos de alumnos de prueba
  * @param {String} studentName - Nombre del estudiante a insertas
  * @param {String} locality - Localidad del estudiante
  */
@@ -46,7 +47,8 @@ testInsertStudent("Pepe Segundo", "Zujaira");
 
 
 /**
- * Añade las asignaturas a los desplegables del html
+ * @function
+ * @description Añade las asignaturas a los desplegables del html
  * @param {Object} selectDropdown - El desplegable en el que se insertará la lista de asignaturas
  */
 function createDropdownSubjects(selectDropdown) {
@@ -70,7 +72,8 @@ createDropdownSubjects(selectCalificate);
 */
 
 /**
- * Elimina la tablade datos HTML de la página 
+ * @function
+ * @description Elimina la tablade datos HTML de la página 
  */
 function clearTable() {
     const previousTable = document.getElementById("studentTable");
