@@ -1,5 +1,6 @@
 /**
- * Dirección de vivienda de una persona
+ * @class
+ * @description Dirección de vivienda de una persona
  */
 export class Direction {
     #road;
@@ -9,7 +10,8 @@ export class Direction {
     #province;
     #locality;
     /**
-     * Crea una dirección
+     * @constructor
+     * @description Crea una dirección
      * @param {String} road - Nombre de calle de la vivienda
      * @param {Number} number - Número de la vivienda
      * @param {Number} floor - Número de piso de la vivienda
@@ -27,7 +29,7 @@ export class Direction {
     }
 
     /**
-     * Devuelve la calle de la dirección
+     * @description Devuelve la calle de la dirección
      * @returns {String} - El nombre de la calle
      */
     getRoad() {
@@ -35,7 +37,7 @@ export class Direction {
     }
 
     /**
-     * Devuelve el número de la vivienda
+     * @description Devuelve el número de la vivienda
      * @returns {Number} - El número de la vivienda
      */
     getNumber() {
@@ -43,7 +45,7 @@ export class Direction {
     }
 
     /**
-     * Devuelve el número de piso de la vivienda
+     * @description Devuelve el número de piso de la vivienda
      * @returns {Number} - El número de piso de la vivienda
      */
     getFloor() {
@@ -51,7 +53,7 @@ export class Direction {
     }
 
     /**
-     * Devuelve el código postal de la dirección
+     * @description Devuelve el código postal de la dirección
      * @returns {Number} - El número de código postal de la vivienda
      */
     getPostcode() {
@@ -59,7 +61,7 @@ export class Direction {
     }
 
     /**
-     * Devuelve la provincia de la dirección
+     * @description Devuelve la provincia de la dirección
      * @returns {String} - El nombre de la provincia en la que reside la vivienda
      */
     getProvince() {
@@ -67,7 +69,7 @@ export class Direction {
     }
 
     /**
-     * Devuelve la localidad de la dirección
+     * @description Devuelve la localidad de la dirección
      * @returns {String} - El nombre de la localidad en la que reside la vivienda
      */
     getLocality() {
@@ -75,7 +77,7 @@ export class Direction {
     }
 
     /**
-     * Devuelve un texto con la dirección completa
+     * @description Devuelve un texto con la dirección completa
      * @returns {String} - Texto con la dirección completa en detalle
      */
     toString() {

@@ -2,7 +2,8 @@ import { NamedList } from './NamedList.js';
 
 
 /**
- * Estudiante con lista de matrículas asignadas
+ * @class
+ * @description Estudiante con lista de matrículas asignadas
  * @extends NamedList
  */
 export class Student extends NamedList {
@@ -10,7 +11,8 @@ export class Student extends NamedList {
     #age;
     #direction;
     /**
-     * Crea un estudiante con su nombre, edad y dirección
+     * @constructor
+     * @description Crea un estudiante con su nombre, edad y dirección
      * @param {String} name - El nombre del estudiante
      * @param {Number} age - La edad del estudiante
      * @param {Direction} direction - La dirección de la vivienda del estudiante
@@ -22,7 +24,7 @@ export class Student extends NamedList {
     }
 
     /**
-     * Devuelve el identificador del estudiante
+     * @description Devuelve el identificador del estudiante
      * @returns {Number} - El identificador del estudiante
      */
     getId() {
@@ -30,7 +32,7 @@ export class Student extends NamedList {
     }
 
     /**
-     * Devuelve la edad del estudiante
+     * @description Devuelve la edad del estudiante
      * @returns {Number} - La edad del estudiante
      */
     getAge() {
@@ -38,7 +40,7 @@ export class Student extends NamedList {
     }
 
     /**
-     * Devuelve la dirección del estudiante
+     * @description Devuelve la dirección del estudiante
      * @returns {Direction} - La dirección del estudiante
      */
     getDirection() {
@@ -46,7 +48,7 @@ export class Student extends NamedList {
     }
 
     /**
-     * Añade matrícula al alumno, comprobando que no esté ya matriculado en esa asignatura
+     * @description Añade matrícula al alumno, comprobando que no esté ya matriculado en esa asignatura
      * @param {Tuition} tuition - La matrícula que se añadirá a la lista de matrículas de este estudiante
      * @returns {Boolean} - Estado de la operación (true si se ha añadido satisfactoriamente, false de lo contrario)
      */
@@ -64,7 +66,7 @@ export class Student extends NamedList {
     }
 
     /**
-     * Añade notas a una asignatura dadas por parámetro
+     * @description Añade notas a una asignatura dadas por parámetro
      * @param {String} subjectName - El nombre de la asignatura a la que se añadirán las notas
      * @param {Number[]} arrayCalifications - Array de notas que se añadirán a la asignatura dada
      * @returns {Boolean} - Estado de la operación (true si se ha añadido satisfactoriamente, false de lo contrario)
@@ -86,7 +88,7 @@ export class Student extends NamedList {
 
     
     /**
-     * Desmatricula al alumno en la asignatura y fecha indicadas por parámetro
+     * @description Desmatricula al alumno en la asignatura y fecha indicadas por parámetro
      * @param {String} nameTuition - Nombre de la asignatura de la que se quiere desmatricular
      * @param {Date} cancelDate - Fecha que constará como fecha de desmatriculación
      * @returns {Boolean} - Estado de la operación (true si se ha añadido satisfactoriamente, false de lo contrario)
@@ -105,7 +107,7 @@ export class Student extends NamedList {
     }
 
     /**
-     * Establece un nuevo identificador al estudiante
+     * @description Establece un nuevo identificador al estudiante
      * @param {Number} id - El nuevo identificador para el estudiante
      */
     setID(id) {
@@ -114,7 +116,7 @@ export class Student extends NamedList {
 
     
     /**
-     * Devuelve la media total de la media de cada asignatura que contenga el filtro indicado por parámetro
+     * @description Devuelve la media total de la media de cada asignatura que contenga el filtro indicado por parámetro
      * @param {String} filter - Cadena de texto que deberán contener las asignaturas en las que esté matriculado el estudiante
      * @returns {Number} - La media total de cada media de todas las asignaturas que cumplen el filtro dado
      */
@@ -131,7 +133,7 @@ export class Student extends NamedList {
     }
 
     /**
-     * Devuelve un texto con una breve descripción del estudiante según sus atributos
+     * @description Devuelve un texto con una breve descripción del estudiante según sus atributos
      * @returns {String} - El texto que describe los atributos del estudiante
      */
     toString() {
@@ -140,7 +142,7 @@ export class Student extends NamedList {
 
     
     /**
-     * Crea una tabla HTML que muestra las asignaturas que contengan el filtro dado por parámetro y sus notas y media
+     * @description Crea una tabla HTML que muestra las asignaturas que contengan el filtro dado por parámetro y sus notas y media
      * @param {String} filter - Cadena de texto que deberán contener las asignaturas en las que esté matriculado el estudiante para filtrar
      */
     createTable(filter) {

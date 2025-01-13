@@ -1,14 +1,14 @@
 import { NamedList } from './NamedList.js';
 
 /**
- * Lista de alumnos que obtiene de la herencia de NamedList los atributo de nombre y lista de elementos (estudiantes)
+ * @class
+ * @description Lista de alumnos que obtiene de la herencia de NamedList los atributo de nombre y lista de elementos (estudiantes)
  * @extends NamedList
  */
 export class Classroom extends NamedList {
 
     /**
-     * Añade estudiante al aula, comprobando que el nombre del estudiante sólo contenga letras (con o sin tilde) y espacios en blanco y
-     * que no haya duplicados según el nombre de estudiante
+     * @description Añade estudiante al aula, comprobando que el nombre del estudiante sólo contenga letras (con o sin tilde) y espacios en blanco y que no haya duplicados según el nombre de estudiante
      * @param {Student} student - Estudiante para añadir al aula
      * @returns {Boolean} - Estado de la operación (true si se ha añadido satisfactoriamente, false de lo contrario)
      */
@@ -34,8 +34,7 @@ export class Classroom extends NamedList {
     }
 
     /**
-     * Añade matrícula a un estudiante dados por parámetro, comprobando que la asignatura de la matrícula contenga sólo letras,
-     * números romanos o espaciose en blanco
+     * @description Añade matrícula a un estudiante dados por parámetro, comprobando que la asignatura de la matrícula contenga sólo letras, números romanos o espaciose en blanco
      * @param {String} studentName - Nombre del estudiante al que se quiere añadir la matrícula
      * @param {Tuition} tuition - Matrícula a añadir para el estudiante
      * @returns {Boolean} - Estado de la operación (true si se ha añadido satisfactoriamente, false de lo contrario)
@@ -63,7 +62,7 @@ export class Classroom extends NamedList {
     }
 
     /**
-     * Añade un array de notas a la asignatura del estudiante dados por parámetro, comprobando que las notas sean números entre 0 y 10
+     * @description Añade un array de notas a la asignatura del estudiante dados por parámetro, comprobando que las notas sean números entre 0 y 10
      * @param {String} studentName - Nombre del estudiante al que añadir las notas
      * @param {String} subjectName - Nombre de la asignatura de la cual son las notas
      * @param {Number[]} califications - Array de notas a añadir
@@ -90,7 +89,7 @@ export class Classroom extends NamedList {
     }
 
     /**
-     * Comprueba que los elementos del array dado por parámetro sean números enteros entre 0 y 10
+     * @description Comprueba que los elementos del array dado por parámetro sean números enteros entre 0 y 10
      * @param {Number[]} arrayCalifications - Array de notas para evaluar si su formato es correcto
      * @returns {Boolean} Estado de la operación (true si se ha añadido satisfactoriamente, false de lo contrario)
      */
@@ -105,7 +104,7 @@ export class Classroom extends NamedList {
     }
 
     /**
-     * Desmatricula un estudiante en una asignatura y fecha dadas por parámetro
+     * @description Desmatricula un estudiante en una asignatura y fecha dadas por parámetro
      * @param {String} studentName - Nombre del estudiante al que desmatricular
      * @param {String} tuitionName - Nombre de la asignatura que se desmatriculará del estudiante
      * @param {Date} cancelDate - Fecha que constará como fecha de desmatriculación
@@ -127,7 +126,7 @@ export class Classroom extends NamedList {
     }
 
     /**
-     * Borra la matrícula del estudiante dados por parámetro
+     * @description Borra la matrícula del estudiante dados por parámetro
      * @param {String} studentName - Nombre del estudiante al que se le eliminará la matrícula
      * @param {String} tuitionName - Nombre de la matrícula que se eliminará del estudiante
      * @returns {Boolean} - Estado de la operación (true si se ha añadido satisfactoriamente, false de lo contrario)
@@ -148,7 +147,7 @@ export class Classroom extends NamedList {
     }
 
     /**
-     * Devuelve la media de todos los estudiantes que contengan en su nombre el filtro dado por parámetro
+     * @description Devuelve la media de todos los estudiantes que contengan en su nombre el filtro dado por parámetro
      * @param {String} filter - Cadena de texto que se aplica como filtro para extraer todos los estudiantes que la contengan
      * @returns {Number} - La media aritmética de todas las medias de notas de la lista de estudiantes obtenida con el filtro
      */
@@ -163,7 +162,7 @@ export class Classroom extends NamedList {
     }
 
     /**
-     * Muestra por consola todos los estudiantes
+     * @description Muestra por consola todos los estudiantes
      */
     logAllStudents() {
         this.elements.forEach(element => {
@@ -172,7 +171,7 @@ export class Classroom extends NamedList {
     }
 
     /**
-     * Crea una tabla HTML que muestra los datos de los estudiantes que contengan el filtro dado por parámetro
+     * @description Crea una tabla HTML que muestra los datos de los estudiantes que contengan el filtro dado por parámetro
      * @param {String} filter - Cadena de texto que se aplica como filtro para extraer todos los estudiantes que la contengan
      */
     createTable(filter) {
@@ -230,7 +229,7 @@ export class Classroom extends NamedList {
     }
 
     /**
-     * Crea una tabla HTML con las notas de los estudiantes de la asignatura indicada por el filtro
+     * @description Crea una tabla HTML con las notas de los estudiantes de la asignatura indicada por el filtro
      * @param {String} filter - Cadena de texto que se aplica como filtro para extraer todos los estudiantes que la contengan
      */
     createTableSubjects(filter) {
