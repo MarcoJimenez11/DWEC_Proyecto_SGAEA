@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Proyecto 1</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script type="module" src="../js/pages/createStudent.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Gestión de Estudiantes</h1>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="createStudent.html">Crear Estudiante</a>
+            <a href="deleteStudent.html">Borrar Estudiante</a>
+            <!-- <a href="addSubject.html">Matricular Estudiante</a> -->
+            <!-- <a href="addCalifications.html">Añadir notas a Estudiante</a> -->
+            <a href="deleteSubject.html">Desmatricular Estudiante</a>
+        </nav>
+    </header>
+
+    
+    <section class="content">
+        <section class="left">
+            <h2>Crear Estudiante</h2>
+            <table>
+                <tr>
+                    <td>
+                        <label>Nombre</label>
+                    </td>
+                    <td>
+                        <input type="text" id="nameStudent" name="nameStudent" value="Marco">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Edad</label>
+                    </td>
+                    <td>
+                        <input type="number" id="ageStudent" name="ageStudent" value="20">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Calle</label>
+                    </td>
+                    <td>
+                        <input type="text" id="roadDirection" name="roadDirection" value="Real">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Número</label>
+                    </td>
+                    <td>
+                        <input type="number" id="numberDirection" name="numberDirection" value="1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Piso</label>
+                    </td>
+                    <td>
+                        <input type="number" id="floorDirection" name="floorDirection" value="1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Código Postal</label>
+                    </td>
+                    <td>
+                        <input type="number" id="postcodeDirection" name="postcodeDirection" value="18230">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Provincia</label>
+                    </td>
+                    <td>
+                        <input type="text" id="provinceDirection" name="provinceDirection" value="Granada">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Localidad</label>
+                    </td>
+                    <td>
+                        <input type="text" id="localityDirection" name="localityDirection" value="Atarfe">
+                    </td>
+                </tr>
+            </table>
+
+            <button id="buttonAdd" name="buttonAdd"> Añadir Estudiante</button>
+
+        </section>
+
+</body>
+
+</html>

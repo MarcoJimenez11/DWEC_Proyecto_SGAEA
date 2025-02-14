@@ -5,127 +5,24 @@
     <meta charset="UTF-8">
     <title>Proyecto 1</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <script type="module" src="js/pages/home.js" defer></script>
 </head>
 
 <body>
+<header>
     <h1>Gestión de Estudiantes</h1>
+    <nav>
+        <a href="">Inicio</a>
+        <a href="html/createStudent.html">Crear Estudiante</a>
+        <a href="html/deleteStudent.html">Borrar Estudiante</a>
+        <!-- <a href="html/addSubject.html">Matricular Estudiante</a> -->
+        <!-- <a href="html/addCalifications.html">Añadir notas a Estudiante</a> -->
+        <a href="html/deleteSubject.html">Desmatricular Estudiante</a>
+    </nav>
+</header>
+
     <section class="content">
-        <section class="left">
-            <h2>Crear Estudiante</h2>
-            <table>
-                <tr>
-                    <td>
-                        <label>Nombre</label>
-                    </td>
-                    <td>
-                        <input type="text" id="nameStudent" name="nameStudent" value="Marco">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>Edad</label>
-                    </td>
-                    <td>
-                        <input type="number" id="ageStudent" name="ageStudent" value="20">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>Calle</label>
-                    </td>
-                    <td>
-                        <input type="text" id="roadDirection" name="roadDirection" value="Real">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>Número</label>
-                    </td>
-                    <td>
-                        <input type="number" id="numberDirection" name="numberDirection" value="1">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>Piso</label>
-                    </td>
-                    <td>
-                        <input type="number" id="floorDirection" name="floorDirection" value="1">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>Código Postal</label>
-                    </td>
-                    <td>
-                        <input type="number" id="postcodeDirection" name="postcodeDirection" value="18230">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>Provincia</label>
-                    </td>
-                    <td>
-                        <input type="text" id="provinceDirection" name="provinceDirection" value="Granada">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>Localidad</label>
-                    </td>
-                    <td>
-                        <input type="text" id="localityDirection" name="localityDirection" value="Atarfe">
-                    </td>
-                </tr>
-            </table>
-
-            <button id="buttonAdd" name="buttonAdd"> Añadir Estudiante</button>
-
-
-
-            <h2>Borrar Estudiante</h2>
-            <label>Nombre</label>
-            <input type="text" id="nameRemoveStudent" name="nameRemoveStudent"><br>
-            <button id="buttonRemove" name="buttonRemove"> Borrar Estudiante</button>
-
-
-
-            <h2>Matricular a estudiante</h2>
-            <label>Nombre de estudiante</label>
-            <input type="text" id="nameStudentAddSubject" name="nameStudentAddSubject" value="Marco"><br>
-            <label>Nombre de asignatura</label>
-            <select id="nameSubjectAddSubject" name="nameSubjectAddSubject">
-            </select>
-            <br>
-            <label>Fecha</label>
-            <input type="date" id="dateAddSubject" name="dateAddSubject" value="2024-01-01"><br>
-            <button id="buttonAddSubject" name="buttonAddSubject"> Matricular</button>
-
-            <h2>Añadir calificaciones a estudiante</h2>
-            <label>Nombre de estudiante</label>
-            <input type="text" id="nameStudentAddCalifications" name="nameStudentAddCalifications" value="Marco"><br>
-            <label>Nombre de asignatura</label>
-            <select id="nameSubjectAddCalifications" name="nameSubjectAddCalifications">
-            </select>
-            <br>
-            <label>Notas (seguidas por coma)</label>
-            <input type="text" id="calificationsAddCalifications" name="calificationsAddCalifications" value="5,7,9"><br>
-            <button id="buttonAddCalifications" name="buttonAddCalifications"> Calificar</button>
-
-            <h2>Desmatricular a estudiante</h2>
-            <label>Nombre de estudiante</label>
-            <input type="text" id="nameStudentRemoveSubject" name="nameStudentRemoveSubject" value="Marco"><br>
-            <label>Nombre de asignatura</label>
-            <select id="nameSubjectRemoveSubject" name="nameSubjectRemoveSubject">
-            </select>
-            <br>
-            <label>Fecha</label>
-            <input type="date" id="dateRemoveSubject" name="dateRemoveSubject" value="2025-01-01"><br>
-            <button id="buttonCancelSubject" name="buttonCancelSubject"> Desmatricular</button>
-            <button id="buttonRemoveSubject" name="buttonRemoveSubject"> Borrar</button>
-        </section>
-
-        <section id="centerSection" class="center">
+        <section id="centerSection" class="left">
             <h2>Mostrar Estudiantes</h2>
             <button id="buttonLogStudents" name="buttonLogStudents"> En consola</button>
             <button id="buttonTableStudents" name="buttonTableStudents"> En tabla</button>
@@ -151,7 +48,7 @@
             <h2>Datos</h2>
         </section>
     </section>
-    <script type="module" src="js/SchoolManager.js"></script>
+    
 </body>
 
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Proyecto 1</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script type="module" src="../js/pages/addCalifications.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Gestión de Estudiantes</h1>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="createStudent.html">Crear Estudiante</a>
+            <a href="deleteStudent.html">Borrar Estudiante</a>
+            <!-- <a href="addSubject.html">Matricular Estudiante</a> -->
+            <!-- <a href="addCalifications.html">Añadir notas a Estudiante</a> -->
+            <a href="deleteSubject.html">Desmatricular Estudiante</a>
+        </nav>
+    </header>
+
+    
+    <section class="content">
+        <section class="left">
+            
+            <h2>Añadir calificaciones a estudiante</h2>
+            <label>Nombre de estudiante</label>
+            <input type="text" id="nameStudentAddCalifications" name="nameStudentAddCalifications" value="Marco" readonly><br>
+            <label>Nombre de asignatura</label>
+            <input type="text" id="nameSubjectAddCalifications" name="nameSubjectAddCalifications" readonly>
+            <br>
+            <label>Notas (seguidas por coma)</label>
+            <input type="text" id="calificationsAddCalifications" name="calificationsAddCalifications" value="5,7,9"><br>
+            <button id="buttonAddCalifications" name="buttonAddCalifications"> Calificar</button>
+
+        </section>
+
+</body>
+
+</html>

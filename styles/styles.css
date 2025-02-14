@@ -1,6 +1,17 @@
+body {
+    background-color: rgb(174, 225, 255);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(0, 90, 123);
+}
+
 section.content {
     display: flex;
-    background-color: rgb(222, 255, 244);
+    justify-content: space-between;
+    padding: 20px;  
 }
 
 .studentTable,
@@ -26,7 +37,6 @@ h1 {
     display: block;
     align-content: center;
     text-align: center;
-    background-color: rgb(0, 255, 170);
     color: rgb(255, 255, 255);
 }
 
@@ -38,4 +48,18 @@ button {
 button:hover {
     background-color: rgb(0, 56, 37);
     color: rgb(255, 255, 255);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;  
+}
+
+nav a {
+    color: aliceblue;
+}
+
+input[readonly] {
+    background-color: rgb(204, 204, 204);
 }
