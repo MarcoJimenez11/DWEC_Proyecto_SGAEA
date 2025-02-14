@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Proyecto 1</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script type="module" src="../js/pages/addSubject.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Gestión de Estudiantes</h1>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="createStudent.html">Crear Estudiante</a>
+            <a href="deleteStudent.html">Borrar Estudiante</a>
+            <!-- <a href="addSubject.html">Matricular Estudiante</a> -->
+            <!-- <a href="addCalifications.html">Añadir notas a Estudiante</a> -->
+            <a href="deleteSubject.html">Desmatricular Estudiante</a>
+        </nav>
+    </header>
+
+    
+    <section class="content">
+        <section class="left">
+            
+            <h2>Matricular a estudiante</h2>
+            <label>Nombre de estudiante</label>
+            <input type="text" id="nameStudentAddSubject" name="nameStudentAddSubject" value="Marco" readonly><br>
+            <label>Nombre de asignatura</label>
+            <select id="nameSubjectAddSubject" name="nameSubjectAddSubject">
+            </select>
+            <br>
+            <label>Fecha</label>
+            <input type="date" id="dateAddSubject" name="dateAddSubject" value="2024-01-01"><br>
+            <button id="buttonAddSubject" name="buttonAddSubject"> Matricular</button>
+
+        </section>
+
+</body>
+
+</html>

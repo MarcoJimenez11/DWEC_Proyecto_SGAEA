@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Proyecto 1</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script type="module" src="../js/pages/deleteSubject.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Gestión de Estudiantes</h1>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="createStudent.html">Crear Estudiante</a>
+            <a href="deleteStudent.html">Borrar Estudiante</a>
+            <!-- <a href="addSubject.html">Matricular Estudiante</a> -->
+            <!-- <a href="addCalifications.html">Añadir notas a Estudiante</a> -->
+            <a href="deleteSubject.html">Desmatricular Estudiante</a>
+        </nav>
+    </header>
+
+    
+    <section class="content">
+        <section class="left">
+
+            <h2>Desmatricular a estudiante</h2>
+            <label>Nombre de estudiante</label>
+            <input type="text" id="nameStudentRemoveSubject" name="nameStudentRemoveSubject" value="Marco"><br>
+            <label>Nombre de asignatura</label>
+            <select id="nameSubjectRemoveSubject" name="nameSubjectRemoveSubject">
+            </select>
+            <br>
+            <label>Fecha</label>
+            <input type="date" id="dateRemoveSubject" name="dateRemoveSubject" value="2025-01-01"><br>
+            <button id="buttonCancelSubject" name="buttonCancelSubject"> Desmatricular</button>
+            <button id="buttonRemoveSubject" name="buttonRemoveSubject"> Borrar</button>
+
+        </section>
+
+</body>
+
+</html>
